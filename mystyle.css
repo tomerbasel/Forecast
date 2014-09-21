@@ -1,0 +1,17 @@
+body{ 
+	background-image:url('6.jpg');
+	
+}
+
+#content{
+	margin-top: 100px;
+	margin-left:200px;
+
+	background-color: white;
+	width: 750px;
+	border-radius: 10px;
+}
+
+span{margin-left: 20px;}
+
+td{width: 100px;}

@@ -2,44 +2,38 @@
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  ////Click
-  $("button").click(function(){
-  ///Get element of text box
-    var city = $('#text').val();
-    alert( "you choose"+city );
-  ////POST
- 
-
-$.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q="+city,
-        type: 'GET',
-        dataType : 'json',
-        success: function(tomer){
-       $('#result1').append("  "+tomer["coord"]["lat"]);
-      $('#result2').append("  "+tomer["coord"]["lon"]);
-     $('#result3').append("  "+tomer["main"]["humidity"]);
-    $('#result4').append("  "+tomer["sys"]["country"]);
-  $('#result5').append("  "+tomer["wind"]["speed"]);
-
-        }
-      });
-    
-}); 
-});
-
-</script>
-
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
-<input type= "text" id="text">
-<button>send</button><br>
-lat<span id="result1"></span><br>
-lon<span id="result2"></span><br>
-humidity<span id="result3"></span><br>
-country<span id="result4"></span><br>
-wind speed<span id="result5"></span><br>
+
+
+<div id="content">
+        <input type= "text" id="text">
+        <button>send</button><br>
+
+<table>
+  <tr>
+    <td>lat</td>
+    <td><span id="result1"></span></td>    
+  </tr>
+  <tr>
+    <td>lon</td>
+    <td><span id="result2"></span></td>    
+  </tr>
+  <tr>
+    <td>humidity</td>
+    <td><span id="result3"></span></td>    
+  </tr> 
+  <tr>
+    <td>country</td>
+    <td><span id="result4"></span></td>    
+  </tr> <tr>
+    <td>wind speed</td>
+    <td><span id="result5"></span></td>    
+  </tr>
+</div>
+
 
 
 </body>
