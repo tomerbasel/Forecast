@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("button").click(function(){
   ///Get element of text box
     var city = $('#text').val();
-    alert( "you choose"+city );
+    alert( "You choose"+" "+city );
   ////POST
  
 
@@ -12,11 +12,11 @@ $.ajax({
         type: 'GET',
         dataType : 'json',
         success: function(tomer){
-       $('#result1').append("  "+tomer["coord"]["lat"]);
-      $('#result2').append("  "+tomer["coord"]["lon"]);
-     $('#result3').append("  "+tomer["main"]["humidity"]);
-    $('#result4').append("  "+tomer["sys"]["country"]);
-  $('#result5').append("  "+tomer["wind"]["speed"]);
+       $('#result3').append(tomer["coord"]["lat"]);
+      $('#result2').append(tomer["coord"]["lon"]);
+     $('#result4').append(tomer["main"]["humidity"]);
+    $('#result1').append(tomer["sys"]["country"]);
+  $('#result5').append(tomer["wind"]["speed"]);
 
         }
       });
